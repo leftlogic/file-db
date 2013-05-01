@@ -1,0 +1,16 @@
+{
+  "name": "filedb",
+  "version": "0.0.0",
+  "description": "",
+  "main": "filedb.js",
+  "scripts": {
+    "test": "tap ./test"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "shortid": "~1.0.9",
+    "underscore": "~1.4.4"
+  }
+}
