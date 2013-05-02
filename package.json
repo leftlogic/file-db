@@ -1,14 +1,12 @@
 {
   "name": "file-db",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Document database that uses directories and files to store its data, supporting nested key-value objects in named collections",
   "main": "filedb.js",
-  "scripts": {
-    "test": "tap ./test"
-  },
-  "repository": "",
-  "author": "",
-  "license": "BSD",
+  "scripts": {},
+  "repository": "git://github.com/leftlogic/filedb.git",
+  "author": "Tom Ashworth <tom@phuu.net>",
+  "license": "MIT",
   "dependencies": {
     "shortid": "~1.0.9",
     "underscore": "~1.4.4",
