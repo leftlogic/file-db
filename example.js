@@ -25,17 +25,17 @@ fdb.open('/Users/tom/dev/tmp/test-fdb', function (err, db) {
   //     console.log('saved:', bin);
   //   });
 
-  // db.use('bins')
-  //   .find('test')
-  //   .exec(function (err, bin) {
-  //     console.log('found:', bin);
-  //   });
+  db.use('bins')
+    .findById('abc')
+    .exec(function (err, bin) {
+      console.log('found:', bin);
+    });
 
   // .find() here is optional
-  db.use('bins')
-    .find()
-    .exec(function (err, data) {
-      console.log(util.inspect(data, { depth: null, colors: true }));
-    });
+  // db.use('bins')
+  //   .find()
+  //   .exec(function (err, data) {
+  //     console.log(util.inspect(data, { depth: null, colors: true }));
+  //   });
 
 });
