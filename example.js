@@ -3,14 +3,16 @@ var fdb = require('./'),
 
 fdb.open('/Users/tom/dev/tmp/test-fdb', function (err, db) {
 
-  // db.use('bins')
-  //   .save({
-  //     html: '<html></html>',
-  //     js: 'console.log("Hello.");'
-  //   })
-  //   .exec(function (err, bin) {
-  //     console.log.apply(console, [].slice.call(arguments));
-  //   });
+  db.use('bins')
+    .save({
+      _id: 'VTIN9PHZv5',
+      '2': {
+        html: '<html>Version 2 - edited again</html>'
+      }
+    })
+    .exec(function (err, bin) {
+      console.log.apply(console, [].slice.call(arguments));
+    });
 
   // db.use('bins')
   //   .save({
@@ -25,11 +27,11 @@ fdb.open('/Users/tom/dev/tmp/test-fdb', function (err, db) {
   //     console.log('saved:', bin);
   //   });
 
-  db.use('bins')
-    .findById('abc')
-    .exec(function (err, bin) {
-      console.log('found:', bin);
-    });
+  // db.use('bins')
+  //   .findById('abc')
+  //   .exec(function (err, bin) {
+  //     console.log('found:', bin);
+  //   });
 
   // .find() here is optional
   // db.use('bins')
