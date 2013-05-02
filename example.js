@@ -33,7 +33,6 @@ fdb.open('tmp/test-fdb', function (err, db) {
       console.log('findById:', util.inspect(data, { depth: null, colors: true }));
     });
 
-  // .find() here is optional
   db.use('bins')
     .find()
     .exec(function (err, data) {
