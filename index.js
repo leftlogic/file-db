@@ -1,1 +1,1 @@
-module.exports = require('./lib/filedb');
+module.exports = require('./lib/file-db');
