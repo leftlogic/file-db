@@ -1,6 +1,6 @@
 {
   "name": "file-db",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Document database that uses directories and files to store its data, supporting nested key-value objects in named collections",
   "main": "filedb.js",
   "scripts": {},
