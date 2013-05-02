@@ -11,7 +11,9 @@
   "license": "BSD",
   "dependencies": {
     "shortid": "~1.0.9",
-    "underscore": "~1.4.4"
+    "underscore": "~1.4.4",
+    "mkdirp": "~0.3.5",
+    "async": "~0.2.8"
   },
   "devDependencies": {
     "tap": "~0.4.2"

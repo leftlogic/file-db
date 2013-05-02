@@ -1,6 +1,7 @@
-var fdb = require('./');
+var fdb = require('./'),
+    util = require('util');
 
-fdb.open('~/dev/tmp/test-fdb', function (err, db) {
+fdb.open('/Users/tom/dev/tmp/test-fdb', function (err, db) {
 
   // db.use('bins')
   //   .save({
@@ -11,28 +12,28 @@ fdb.open('~/dev/tmp/test-fdb', function (err, db) {
   //     console.log.apply(console, [].slice.call(arguments));
   //   });
 
-  db.use('bins')
-    .save({
-      html: '<h1>Hello</h1>',
-      js: 'console.log("No.");'
-    })
-    .save({
-      _id: 'test',
-      css: '.nose { color: red; }'
-    })
-    .exec(function (err, bin) {
-      console.log('saved:', bin);
-    });
+  // db.use('bins')
+  //   .save({
+  //     html: '<h1>Hello</h1>',
+  //     js: 'console.log("No.");'
+  //   })
+  //   .save({
+  //     _id: 'test',
+  //     css: '.nose { color: red; }'
+  //   })
+  //   .exec(function (err, bin) {
+  //     console.log('saved:', bin);
+  //   });
+
+  // db.use('bins')
+  //   .find('test')
+  //   .exec(function (err, bin) {
+  //     console.log('found:', bin);
+  //   });
 
   db.use('bins')
-    .find('test')
-    .exec(function (err, bin) {
-      console.log('found:', bin);
-    });
-
-  db.use('bins')
-    .exec(function () {
-      console.log.apply(console, [].slice.call(arguments));
+    .exec(function (err, data) {
+      console.log(util.inspect(data, { depth: null, colors: true }));
     });
 
 });
